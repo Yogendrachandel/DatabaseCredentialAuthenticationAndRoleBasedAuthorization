@@ -16,7 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import com.learn.repository.UserRepositoryImpl;
 
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity(debug=true)//to enabled spring security 
 @EnableGlobalMethodSecurity(prePostEnabled = true) //only when method level  @PreAuthorize annotation used.
 public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 

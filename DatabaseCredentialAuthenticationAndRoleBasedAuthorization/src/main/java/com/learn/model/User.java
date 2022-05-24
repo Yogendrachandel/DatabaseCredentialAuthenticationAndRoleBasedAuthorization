@@ -31,7 +31,7 @@ public class User {
 	private boolean enabled;
 	
 	
-	
+	//EAGER will fetch child table data when parent table is also fetch 
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name="users_roles" ,joinColumns = @JoinColumn(name="user_id"),inverseJoinColumns =@JoinColumn(name="role_id") )
 	private Set<Role>roles=new HashSet<>();
